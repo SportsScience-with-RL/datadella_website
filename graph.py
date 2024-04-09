@@ -77,7 +77,7 @@ def parcours_timeline_fr():
         
     fig.update_xaxes(showgrid=False, title=None)
     fig.update_yaxes(showgrid=False, showticklabels=False, title=None)
-    fig.update_layout(plot_bgcolor='#F1E4C8', paper_bgcolor='#F1E4C8', xaxis=dict(tickvals=[2013, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023]))
+    fig.update_layout(plot_bgcolor='white', paper_bgcolor='white', xaxis=dict(tickvals=[2013, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023]))
     fig.update_traces(customdata=exp_df, hovertemplate='<b>%{customdata[1]}</b><br><br>%{customdata[2]}<br><br>%{customdata[3]}',
                       hoverlabel=dict(bgcolor='white'))
 
@@ -154,7 +154,7 @@ def parcours_timeline_eng():
         
     fig.update_xaxes(showgrid=False, title=None)
     fig.update_yaxes(showgrid=False, showticklabels=False, title=None)
-    fig.update_layout(plot_bgcolor='#F1E4C8', paper_bgcolor='#F1E4C8', xaxis=dict(tickvals=[2013, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023]))
+    fig.update_layout(plot_bgcolor='white', paper_bgcolor='white', xaxis=dict(tickvals=[2013, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023]))
     fig.update_traces(customdata=exp_df, hovertemplate='<b>%{customdata[1]}</b><br><br>%{customdata[2]}<br><br>%{customdata[3]}',
                       hoverlabel=dict(bgcolor='white'))
 

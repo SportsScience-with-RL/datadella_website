@@ -16,7 +16,7 @@ from datadella_eng import page_eng
 ##############################################
 
 page_title = 'Datadella'
-page_icon = 'logo/Logo9.png'
+page_icon = 'logo/Logo2b.png'
 st.set_page_config(layout='wide', page_icon=page_icon, page_title=page_title)
 
 st.markdown(" <style> div[class^='block-container'] { padding-top: 2rem; } </style> ", unsafe_allow_html=True)
@@ -39,7 +39,7 @@ xp_fig = exp_timeline()
 
 ci, ct = st.columns([.9, .1])
 with ci:
-    st.image('logo/Logo11.png')
+    st.image('logo/Logo2c.png', width=300)
 with ct:
     eng = st.toggle('English')
 
