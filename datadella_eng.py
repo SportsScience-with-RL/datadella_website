@@ -11,7 +11,6 @@ def page_eng(graph):
     if menu == 'Who am I?':
         _, main, _ = st.columns([.25/2, .75, .25/2])
         with main:
-            st.subheader('Me')
             st.write('')
             _, ci, _, ct = st.columns([.1, .2, .05, .65])
             with ci:
@@ -19,16 +18,16 @@ def page_eng(graph):
             with ct:
                 st.write('')
                 st.write('')
-                st.markdown("""<div style="text-align: justify;">Let me introduce myself, my name is Raphaël Lagarde.
-                            With a university degree in sports (Applied Sports Science), I began my professional career as a strength and conditioning coach.
-                            I've always loved sport, which I've practiced since childhood (badminton, field and indoor hockey, capoeira). I wanted to continue my higher education in that direction.</div>""", unsafe_allow_html=True)
+                st.markdown("""<div style="text-align: justify;">My name is Raphaël Lagarde.
+                            With a university degree in sports (Applied Sports Science), I started my professional career as a strength and conditioning coach.
+                            Great lover of sport, which I have practiced since childhood (badminton, field and indoor hockey, capoeira). I wanted to continue my higher education in that direction.</div>""", unsafe_allow_html=True)
             
             ct, _, ci = st.columns([.65, .05, .3])
             with ct:
                 st.write('')
-                st.markdown("""<div style="text-align: justify;">So I began my career in rugby (it will continue mainly in rugby) at amateur level and gradually progressed to professional level, all the way to New Zealand.
+                st.markdown("""<div style="text-align: justify;">I began my career in rugby (it will continue mainly in this sport) at amateur level and gradually progressed to professional level in New Zealand (Hurricanes).
                             It was during this experience in the land of the long white cloud that I discovered the use of data. This is where my passion appeared in addition to the one for sport.
-                            At first, I trained myself in this new field, then I had the opportunity to take a few courses/seminars and finally to complete a diploma education.
+                            At first, I trained myself in this new field, then I undertook courses/seminars and finally to graduate a degree.
                             Today I'm fascinated by the possibilities offered by the use and integration of data, both in terms of the information obtained and the pure technique such as data manipulation.</div>""", unsafe_allow_html=True)
             with ci:
                 st.write('')
@@ -39,14 +38,14 @@ def page_eng(graph):
             st.write('')
             st.subheader('My expertise')
             st.write('')
-            st.markdown("""<div style="text-align: justify;">My desire to set up as a freelance/consultant came after my experience at INS Québec.
+            st.markdown("""<div style="text-align: justify;">My desire to set up as a freelance/consultant came since my experience at INS Québec.
                         Working on several projects and several sports was very enriching and stimulating.
                         Opening up to consultancy contracts will enable me to continue collaborating with a multitude of structures and people, and to enrich my knowledge of unique contexts.
                         <br><br>My business expertise is obviously in sports.
                         And this field has enabled me to take an interest in and work with other fields: physiology, health, medicine, psychology and sociology.
                         It's because of the richness of these "underlying" fields that my business expertise can be applied to many other areas.
-                        <br><br>My technical expertise focuses on the data lifecycle while adopting best practices from measurement, storage, transformation, accessibility, security, visualization, analysis and interpretation. 
-                        <br><br>The combination of these two areas of expertise enables me to offer unique solutions to each individual: I'm convinced that any structure, depending on its context (budget), can and should have access to technological solutions.
+                        <br><br>My technical expertise focuses on the data lifecycle while adopting best practices: measurement, storage, transformation, accessibility, security, visualization, analysis and interpretation. 
+                        <br><br>The combination of these two expertises enables me to offer unique solutions to each individual: I'm convinced that any structure, depending on its context (budget), can and should have access to technological solutions.
                         My services are organized around three axes which can complement each other:
                         <br>- Development of technological solutions
                         <br>- Project support
@@ -62,11 +61,11 @@ def page_eng(graph):
             st.write('')
             st.info('''You can contact me for any service not listed below.
                     This is a non-exhaustive list to give you an overview of the services we offer.
-                    In the **Career/Projects** tab, you'll find a few examples of solutions I've implemented.
+                    In the **Career/Projects** tab, you'll find examples of solutions I've implemented.
                     \n**SERVICE REQUEST**
-                    \nTo request a service or further information, please contact me (see **Contact** tab).
+                    \nTo request a service or additional information, follow the **Contact** tab.
                     You can tell me about your project and the service you're interested in as soon as you get in touch.
-                    I'll send you a form so that I can get as much information as possible before setting up a first meeting.
+                    I'll send you a form so that I can get as much information as possible in order to schedule a first meeting.
                     This first meeting is **free** and **without commitment**: it will enable us to agree on the terms of the collaboration and/or the stages of the project.
                     \n**PRICES**
                     \nPlease let me know your budget when you contact me (it will be requested in the form). Prices are **adapted** to your needs, the project, its duration, etc. and above all your **context/budget**.''')
