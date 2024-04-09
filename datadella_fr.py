@@ -253,7 +253,7 @@ def page_fr(graph):
                 st.image('img/contact/LinkedIn.png', width=90)
             with ct:
                 st.info("**https://www.linkedin.com/in/raphael-lagarde-511b40100/**")
-                st.info("**https://www.linkedin.com/in//**")
+                st.info("**https://www.linkedin.com/company/datadella/**")
             st.write('---')
             cc, ci, ct = st.columns([.4, .1, .5])
             with cc:
