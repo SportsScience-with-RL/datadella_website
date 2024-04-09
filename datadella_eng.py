@@ -147,19 +147,18 @@ def page_eng(graph):
             st.write('')
             st.write('---')
             st.write('')
-            ci, _, ct = st.columns([.5, .05, .45])
-            with ci:
-                st.image('img/projets/projet_ams.png')
-            with ct:
-                st.write('')
-                st.write('')
-                st.markdown("""<div style="text-align: justify;">- Creation of an AMS to centralize a maximum amount of data for visualization and analysis.
+            st.success('**ATHLETE MANAGEMENT SYSTEM (AMS)**')
+            c_ams = st.columns(4)
+            c_ams[0].info('**CENTRALIZE**')
+            c_ams[1].info('**VISUALIZE**')
+            c_ams[2].info('**INFORM**')
+            c_ams[3].info('**MANAGE**')
+            st.markdown("""<div style="text-align: justify;">- Creation of an AMS to centralize a maximum amount of data for visualization and analysis.
                             <br>- Group/team and individual visualizations and information.
                             <br>- Longitudinal monitoring of selected markers.
                             <br>- Timeseries analysis
                             <br>- Extraction of raw data.</div>""", unsafe_allow_html=True)
-            st.write('')    
-            cv1, ct, cv2 = st.columns([.4, .2, .4])
+            cv1, _, cv2 = st.columns([.45, .1, .45])
             with cv1:
                 st.write('')
                 st.video(open('video/ams.mp4', 'rb').read())
@@ -168,35 +167,44 @@ def page_eng(graph):
             st.write('')
             st.write('---')
             st.write('')
-            ct, _, ci = st.columns([.45, .05, .5])
-            with ci:
-                st.write('')
-                st.write('')
-                st.write('')
-                st.image('img/projets/projet_gps.png')
-            with ct:
-                st.markdown("""<div style="text-align: justify;">- Creation of a dashboard to monitor selected markers.
+            st.warning('**GPS - SUIVI & PROGRAMMATION DE SEANCE**')
+            c_gps = st.columns(3)
+            c_gps[0].info('**MONITOR**')
+            c_gps[1].info('**PROGRAM**')
+            c_gps[2].info('**MANAGE**')
+            st.markdown("""<div style="text-align: justify;">- Creation of a dashboard to monitor selected markers.
                             <br>- Group/team and individual visualizations and information.
                             <br>- Longitudinal monitoring of selected markers.
                             <br>- Timeseries analysis
                             <br>- Creation of a session programmer application (% in relation to match(es) reference(s)).</div>""", unsafe_allow_html=True)
-                st.write('')
+            st.write('')
+            ci, _, cv = st.columns([.45, .1, .45])
+            with ci:
+                st.image('img/projets/gps.png')
+            with cv:
                 st.video(open('video/gps.mp4', 'rb').read())
             st.write('')
             st.write('---')
             st.write('')
-            ci, _, ct = st.columns([.5, .05, .45])
-            with ci:
-                st.image('img/projets/projet_questionnaire.png')
-            with ct:
-                st.write('')
-                st.write('')
-                st.write('')
+            st.success('**WELLNESS/MARQUEURS QUALITATIFS - SUIVI & QUESTIONNAIRE**')
+            c_w = st.columns(4)
+            c_w[0].info('**COLLECT**')
+            c_w[1].info('**MONITOR**')
+            c_w[2].info('**ANALYZE**')
+            c_w[3].info('**MANAGE**')
+            c1, _, c2 = st.columns([.55, .1, .35])
+            with c1:
                 st.markdown("""<div style="text-align: justify;">- Creation of a Wellness dashboard.
                             <br>- Group/team and individual visualizations and information.
                             <br>- Longitudinal monitoring of markers.
                             <br>- Timeseries analysis
                             <br>- Creation of customized questionnaires (choice of markers).</div>""", unsafe_allow_html=True)
+                st.write('')
+                st.image('img/projets/wellness.png', width=500)
+            with c2:
+                st.write('')
+                st.write('')
+                st.image('img/projets/questionnaire.png', width=300)
             st.write('')
             cv1, ct, cv2 = st.columns([.4, .2, .4])
             with cv1:
@@ -237,7 +245,7 @@ def page_eng(graph):
             \nprint(profile)\nprint(page)'''
             code_mail = '''library(email)
             \nprint(address)'''
-            code_wa = '''SELECT phone_number FROM whatsapp'''
+            code_wa = '''SELECT whatsapp_number, canadian_number\nFROM whatsapp'''
             cc, ci, ct = st.columns([.4, .1, .5])
             with cc:
                 st.write('')
@@ -264,10 +272,11 @@ def page_eng(graph):
                 st.write('')
                 st.code(code_wa, language='sql')
             with ci:
+                st.write('')
                 st.image('img/contact/whatsapp.png')
             with ct:
-                st.write('')
-                st.success('**+33 7 67 60 57 92**')
+                st.success('''**(+33) 7 67 60 57 92**
+                           \n**(+1) 514 558 5015**''')
             st.write('---')
             cl, ci, ct = st.columns([.6, .05, .35])
             with cl:

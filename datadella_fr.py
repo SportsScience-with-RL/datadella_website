@@ -144,19 +144,18 @@ def page_fr(graph):
             st.write('')
             st.write('---')
             st.write('')
-            ci, _, ct = st.columns([.5, .05, .45])
-            with ci:
-                st.image('img/projets/projet_ams.png')
-            with ct:
-                st.write('')
-                st.write('')
-                st.markdown("""<div style="text-align: justify;">- Création d'un AMS permettant de centraliser un maximum de données pour leur visualisation et analyse.
-                            <br>- Visualisations et informations de groupes/d'équipe et individuel.
-                            <br>- Suivi longitudinal des marqueurs choisis.
-                            <br>- Suivi des variations.
-                            <br>- Extraction des données en fichier brut.</div>""", unsafe_allow_html=True)
-            st.write('')    
-            cv1, ct, cv2 = st.columns([.4, .2, .4])
+            st.success('**ATHLETE MANAGEMENT SYSTEM (AMS)**')
+            c_ams = st.columns(4)
+            c_ams[0].info('**CENTRALISER**')
+            c_ams[1].info('**VISUALISER**')
+            c_ams[2].info('**INFORMER**')
+            c_ams[3].info('**REGULER**')
+            st.markdown("""<div style="text-align: justify;">- Création d'un AMS permettant de centraliser un maximum de données pour leur visualisation et analyse.
+                        <br>- Visualisations et informations de groupes/d'équipe et individuel.
+                        <br>- Suivi longitudinal des marqueurs choisis.
+                        <br>- Suivi des variations.
+                        <br>- Extraction des données en fichier brut.</div>""", unsafe_allow_html=True)
+            cv1, _, cv2 = st.columns([.45, .1, .45])
             with cv1:
                 st.write('')
                 st.video(open('video/ams.mp4', 'rb').read())
@@ -165,35 +164,44 @@ def page_fr(graph):
             st.write('')
             st.write('---')
             st.write('')
-            ct, _, ci = st.columns([.45, .05, .5])
+            st.warning('**GPS - SUIVI & PROGRAMMATION DE SEANCE**')
+            c_gps = st.columns(3)
+            c_gps[0].info('**SUIVRE**')
+            c_gps[1].info('**PROGRAMMER**')
+            c_gps[2].info('**REGULER**')
+            st.markdown("""<div style="text-align: justify;">- Création d'un tableau de bord pour suivi des marqueurs choisis.
+                        <br>- Visualisations et informations de groupes/d'équipe et individuel.
+                        <br>- Suivi longitudinal des marqueurs choisis.
+                        <br>- Suivi des variations.
+                        <br>- Création d'une application de programmation de séance (% en rapport à match(s) référence(s)).</div>""", unsafe_allow_html=True)
+            st.write('')
+            ci, _, cv = st.columns([.45, .1, .45])
             with ci:
-                st.write('')
-                st.write('')
-                st.write('')
-                st.image('img/projets/projet_gps.png')
-            with ct:
-                st.markdown("""<div style="text-align: justify;">- Création d'un tableau de bord pour suivi des marqueurs choisis.
-                            <br>- Visualisations et informations de groupes/d'équipe et individuel.
-                            <br>- Suivi longitudinal des marqueurs choisis.
-                            <br>- Suivi des variations.
-                            <br>- Création d'une application de programmation de séance (% en rapport à match(s) référence(s)).</div>""", unsafe_allow_html=True)
-                st.write('')
+                st.image('img/projets/gps.png')
+            with cv:
                 st.video(open('video/gps.mp4', 'rb').read())
             st.write('')
             st.write('---')
             st.write('')
-            ci, _, ct = st.columns([.5, .05, .45])
-            with ci:
-                st.image('img/projets/projet_questionnaire.png')
-            with ct:
-                st.write('')
-                st.write('')
-                st.write('')
+            st.success('**WELLNESS/MARQUEURS QUALITATIFS - SUIVI & QUESTIONNAIRE**')
+            c_w = st.columns(4)
+            c_w[0].info('**RECOLTER**')
+            c_w[1].info('**SUIVRE**')
+            c_w[2].info('**ANALYSER**')
+            c_w[3].info('**REGULER**')
+            c1, _, c2 = st.columns([.55, .1, .35])
+            with c1:
                 st.markdown("""<div style="text-align: justify;">- Création d'un tableau de bord pour suivi type Wellness.
                             <br>- Visualisations et informations de groupes/d'équipe et individuel.
                             <br>- Suivi longitudinal des marqueurs.
                             <br>- Suivi des variations.
                             <br>- Création de questionnaire sur-mesure (choix des marqueurs).</div>""", unsafe_allow_html=True)
+                st.write('')
+                st.image('img/projets/wellness.png', width=500)
+            with c2:
+                st.write('')
+                st.write('')
+                st.image('img/projets/questionnaire.png', width=300)
             st.write('')
             cv1, ct, cv2 = st.columns([.4, .2, .4])
             with cv1:
@@ -234,7 +242,7 @@ def page_fr(graph):
             \nprint(profile)\nprint(page)'''
             code_mail = '''library(email)
             \nprint(address)'''
-            code_wa = '''SELECT phone_number FROM whatsapp'''
+            code_wa = '''SELECT whatspp_number, canadian_number\nFROM whatsapp'''
             cc, ci, ct = st.columns([.4, .1, .5])
             with cc:
                 st.write('')
@@ -261,10 +269,11 @@ def page_fr(graph):
                 st.write('')
                 st.code(code_wa, language='sql')
             with ci:
+                st.write('')
                 st.image('img/contact/whatsapp.png')
             with ct:
-                st.write('')
-                st.success('**+33 7 67 60 57 92**')
+                st.success('''**(+33) 7 67 60 57 92**
+                           \n**(+1) 514 558 5015**''')
             st.write('---')
             cl, ci, ct = st.columns([.6, .05, .35])
             with cl:
