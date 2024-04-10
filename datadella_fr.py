@@ -6,7 +6,7 @@ def page_fr(graph):
     menu = option_menu(menu_title='',
                    options=['Qui suis-je ?', 'Prestations', 'Parcours/Projets', 'Contact'],
                    icons=['person-bounding-box', 'cart-plus', 'collection', 'chat-left-text'],
-                   default_index=0, orientation='horizontal')
+                   default_index=1, orientation='horizontal')
 
     if menu == 'Qui suis-je ?':
         _, main, _ = st.columns([.25/2, .75, .25/2])
@@ -54,20 +54,12 @@ def page_fr(graph):
         _, main, _ = st.columns([.25/2, .75, .25/2])
         with main:
             st.write('')
-            st.markdown('''<style>p {text-align: center;}</style>''', unsafe_allow_html=True)
-            st.success('''**Les prestations sont facturables pour toutes les structures et personnes quelle que soit leur situation géographique.**''')
+            st.markdown("""<div style="text-align: justify;">Mes offres de prestations sont la combinaison d'une expertise métier dans le sport, la santé et les sciences sociales ; et d'une expertise technique adoptant continuellement les meilleures pratiques. Mes services s'organisent autour de trois axes pouvant se compléter :
+                        <br>- Développement de solutions technologiques
+                        <br>- Accompagnement de projet
+                        <br>- Formation</div>""", unsafe_allow_html=True)
             st.write('')
-            st.info('''Vous pouvez me contacter pour toute demande de prestation non répertoriée ci-dessous.
-                    Il s'agit d'une liste non exhaustive permettant d'avoir une vision globale des offres proposées.
-                    Dans l'onglet **Parcours/Projets** se trouvent quelques exemples de solutions réalisées.
-                    \n**DEMANDE DE PRESTATION**
-                    \nPour une demande de prestation ou d'information complémentaire, suivez l'onglet **Contact**.
-                    Vous pourrez m'y expliquer votre projet et la prestation vous intéressant dès cette prise de contact. Je vous ferai suivre un formulaire me permettant d'avoir un maximum d'informations, afin d'organiser une **première rencontre**.
-                    Celle-ci est **gratuite** et **sans engagement** : elle nous permettra de convenir des modalités de la collaboration et/ou des étapes du projet.
-                    \n**TARIFS**
-                    \nN'hésitez pas à me communiquer votre budget lors la prise de contact (il sera demandé dans le formulaire). Les prix sont **adaptés** à vos besoins, au projet, sa durée etc. et surtout votre **contexte/budget**.''')
-            st.write('')
-            with st.expander('**DEVELOPPEMENT DE SOLUTIONS TECHNOLOGIQUES**', expanded=True):
+            with st.expander('**DEVELOPPEMENT DE SOLUTIONS TECHNOLOGIQUES**'):
                 st.write('')
                 st.markdown("""<div style="text-align: justify;">Cette prestation concerne la création et le développement de solutions analytiques et de visualisation. Cela peut comprendre :
                             <br>- La création de tableaux de bord
@@ -82,7 +74,7 @@ def page_fr(graph):
                             <br><br>"Nous utilisons déjà un outil pour récolter certaines données. Cependant nous aimerions développer un outil plus modulable répondant davantage à nos besoins"
                             <br><br>"Nous souhaitons développer un outil nous permettant de récupérer de l'information et des données sur X situation"</i></div>""", unsafe_allow_html=True)
                 st.write('')
-            with st.expander('**ACCOMPAGNEMENT**', expanded=True):
+            with st.expander('**ACCOMPAGNEMENT**'):
                 st.write('')
                 st.markdown("""<div style="text-align: justify;">Cette prestation concerne l'accompagnement d'une structure avec des outils et solutions déjà en place ou l'accompagnement avec le développement de solutions souhaitées par la structure et/ou proposées ci-dessus. Cela peut comprendre :
                             <br>- Audit de la structure
@@ -98,7 +90,7 @@ def page_fr(graph):
                             <br><br><i>"Je prépare un mémoire pour mon diplôme et je souhaite un accompagnement dans ma réflexion et mes analyses statistiques"
                             <br><br>"Je viens de finaliser la rédaction de mon mémoire et je souhaite avoir une relecture de ma partie analyse statistique"</i></div>""", unsafe_allow_html=True)
                 st.write('')
-            with st.expander('**FORMATION**', expanded=True):
+            with st.expander('**FORMATION**'):
                 st.write('')
                 st.markdown("""<div style="text-align: justify;">Cette prestation concerne l'encadrement d'apprentissages orientés sur l'utilisation des données. Cela peut comprendre :
                             <br>- Apprentissage de langage de programmation
@@ -113,6 +105,19 @@ def page_fr(graph):
                             <br><br>"Nous cherchons un intervenant sur la thématique X pour notre organisme de formation"
                             <br><br>"Je souhaite en apprendre davantage sur l'utilisation des données dans mon domaine avec de vrais cas pratiques"</i></div>""", unsafe_allow_html=True)
                 st.write('')
+            st.write('')
+            st.markdown('''<style>p {text-align: center;}</style>''', unsafe_allow_html=True)
+            st.success('''**Les prestations sont facturables pour toutes les structures et personnes quelle que soit leur situation géographique.**''')
+            st.write('')
+            st.info('''Vous pouvez me contacter pour toute demande de prestation non répertoriée ci-dessous.
+                    Il s'agit d'une liste non exhaustive permettant d'avoir une vision globale des offres proposées.
+                    Dans l'onglet **Parcours/Projets** se trouvent quelques exemples de solutions réalisées.
+                    \n**DEMANDE DE PRESTATION**
+                    \nPour une demande de prestation ou d'information complémentaire, suivez l'onglet **Contact**.
+                    Vous pourrez m'y expliquer votre projet et la prestation vous intéressant dès cette prise de contact. Je vous ferai suivre un formulaire me permettant d'avoir un maximum d'informations, afin d'organiser une **première rencontre**.
+                    Celle-ci est **gratuite** et **sans engagement** : elle nous permettra de convenir des modalités de la collaboration et/ou des étapes du projet.
+                    \n**TARIFS**
+                    \nN'hésitez pas à me communiquer votre budget lors la prise de contact (il sera demandé dans le formulaire). Les prix sont **adaptés** à vos besoins, au projet, sa durée etc. et surtout votre **contexte/budget**.''')
             st.write('')
             st.subheader('Stack technique principale')
             st.write('')
@@ -244,7 +249,7 @@ def page_fr(graph):
             \nprint(profile)\nprint(page)'''
             code_mail = '''library(email)
             \nprint(address)'''
-            code_wa = '''SELECT whatspp_number, canadian_number\nFROM whatsapp'''
+            code_wa = '''SELECT whatspp_number, canadian_number\nFROM phone_numbers'''
             cc, ci, ct = st.columns([.4, .1, .5])
             with cc:
                 st.write('')

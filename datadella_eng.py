@@ -6,7 +6,7 @@ def page_eng(graph):
     menu = option_menu(menu_title='',
                    options=['Who am I?', 'Services', 'Career/Projects', 'Contact'],
                    icons=['person-bounding-box', 'cart-plus', 'collection', 'chat-left-text'],
-                   default_index=0, orientation='horizontal')
+                   default_index=1, orientation='horizontal')
 
     if menu == 'Who am I?':
         _, main, _ = st.columns([.25/2, .75, .25/2])
@@ -38,7 +38,7 @@ def page_eng(graph):
             st.write('')
             st.subheader('My expertise')
             st.write('')
-            st.markdown("""<div style="text-align: justify;">My desire to set up as a freelance/consultant came since my experience at INS Québec.
+            st.markdown("""<div style="text-align: justify;">My desire to lauch myself as a freelance/consultant came since my experience at INS Québec.
                         Working on several projects and several sports was very enriching and stimulating.
                         Opening up to consultancy contracts will enable me to continue collaborating with a multitude of structures and people, and to enrich my knowledge of unique contexts.
                         <br><br>My business expertise is obviously in sports.
@@ -56,21 +56,13 @@ def page_eng(graph):
         _, main, _ = st.columns([.25/2, .75, .25/2])
         with main:
             st.write('')
-            st.markdown('''<style>p {text-align: center;}</style>''', unsafe_allow_html=True)
-            st.success('''**Services are billable for all structures and individuals, regardless of their geographical location.**''')
+            st.markdown("""<div style="text-align: justify;">My offers are the combination of a professional expertise in sport, health and social sciences; and a technical expertise continually adopting best practices.
+                        My services are organized around three axes which can complement each other:
+                        <br>- Development of technological solutions
+                        <br>- Project support
+                        <br>- Education/training</div>""", unsafe_allow_html=True)
             st.write('')
-            st.info('''You can contact me for any service not listed below.
-                    This is a non-exhaustive list to give you an overview of the services we offer.
-                    In the **Career/Projects** tab, you'll find examples of solutions I've implemented.
-                    \n**SERVICE REQUEST**
-                    \nTo request a service or additional information, follow the **Contact** tab.
-                    You can tell me about your project and the service you're interested in as soon as you get in touch.
-                    I'll send you a form so that I can get as much information as possible in order to schedule a first meeting.
-                    This first meeting is **free** and **without commitment**: it will enable us to agree on the terms of the collaboration and/or the stages of the project.
-                    \n**PRICES**
-                    \nPlease let me know your budget when you contact me (it will be requested in the form). Prices are **adapted** to your needs, the project, its duration, etc. and above all your **context/budget**.''')
-            st.write('')
-            with st.expander('**DEVELOPMENT OF TECHNOLOGICAL SOLUTIONS**', expanded=True):
+            with st.expander('**DEVELOPMENT OF TECHNOLOGICAL SOLUTIONS**'):
                 st.write('')
                 st.markdown("""<div style="text-align: justify;">This service covers the creation and development of analytical and visualization solutions. This may include:
                             <br>- Dashboard creation
@@ -85,7 +77,7 @@ def page_eng(graph):
                             <br><br>"We already use a tool to collect certain data. However, we'd like to develop a more modular tool that better meets our needs"
                             <br><br>"We would like to develop a tool to retrieve information and data on X situation"</i></div>""", unsafe_allow_html=True)
                 st.write('')
-            with st.expander('**PROJECT SUPPORT**', expanded=True):
+            with st.expander('**PROJECT SUPPORT**'):
                 st.write('')
                 st.markdown("""<div style="text-align: justify;">This service concerns the support of a structure with tools and solutions already in place, or support with the development of solutions desired by the structure and/or proposed above. This may include:
                             <br>- Structure audit
@@ -101,7 +93,7 @@ def page_eng(graph):
                             <br><br><i>"I'm preparing a dissertation for my degree and would like support in my thinking and statistical analysis"
                             <br><br>"I have just finished writing my dissertation and would like to have my statistical analysis section proofread"</i></div>""", unsafe_allow_html=True)
                 st.write('')
-            with st.expander('**EDUCATION/TRAINING**', expanded=True):
+            with st.expander('**EDUCATION/TRAINING**'):
                 st.write('')
                 st.markdown("""<div style="text-align: justify;">This service concerns the supervision of apprenticeships focused on the use of data. This may include:
                             <br>- Learning a programming language
@@ -115,6 +107,19 @@ def page_eng(graph):
                             <br><br><i>"We would like to train our staff to the use of data on the X topic"
                             <br><br>"I'd like to learn more about the use of data in my field, with real case studies"</i></div>""", unsafe_allow_html=True)
                 st.write('')
+            st.markdown('''<style>p {text-align: center;}</style>''', unsafe_allow_html=True)
+            st.success('''**Services are billable for all structures and individuals, regardless of their geographical location.**''')
+            st.write('')
+            st.info('''You can contact me for any service not listed below.
+                    This is a non-exhaustive list to give you an overview of the services we offer.
+                    In the **Career/Projects** tab, you'll find examples of solutions I've implemented.
+                    \n**SERVICE REQUEST**
+                    \nTo request a service or additional information, follow the **Contact** tab.
+                    You can tell me about your project and the service you're interested in as soon as you get in touch.
+                    I'll send you a form so that I can get as much information as possible in order to schedule a first meeting.
+                    This first meeting is **free** and **without commitment**: it will enable us to agree on the terms of the collaboration and/or the stages of the project.
+                    \n**PRICES**
+                    \nPlease let me know your budget when you contact me (it will be requested in the form). Prices are **adapted** to your needs, the project, its duration, etc. and above all your **context/budget**.''')
             st.write('')
             st.subheader('Main Tech Stack')
             st.write('')
@@ -246,7 +251,7 @@ def page_eng(graph):
             \nprint(profile)\nprint(page)'''
             code_mail = '''library(email)
             \nprint(address)'''
-            code_wa = '''SELECT whatsapp_number, canadian_number\nFROM whatsapp'''
+            code_wa = '''SELECT whatsapp_number, canadian_number\nFROM phone_numbers'''
             cc, ci, ct = st.columns([.4, .1, .5])
             with cc:
                 st.write('')
