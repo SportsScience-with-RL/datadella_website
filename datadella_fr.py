@@ -94,7 +94,7 @@ def page_fr(graph):
                 st.markdown("""<div style="text-align: justify;"><br><b>Exemples de cas de figure :</b></div>""", unsafe_allow_html=True)
                 st.markdown("""<div style="text-align: right;"><br><i>"Nous souhaitons avoir un oeil extérieur sur nos pratiques. Nous souhaitons une certaine expertise métier et technique pour un avis constructif et suivre d'éventuels axes d'amélioration"
                             <br><br><i>"Notre budget ne nous permet pas d'employer quelqu'un pour gérer notre pôle Data. Nous souhaitons donc nous attacher les services d'un consultant"
-                            <br><br>"Je suis athlète individuel et je chercher un professionnel pour s'occuper de mon suivi"
+                            <br><br>"Je suis athlète individuel et je cherche un professionnel pour s'occuper de mon suivi"
                             <br><br><i>"Je prépare un mémoire pour mon diplôme et je souhaite un accompagnement dans ma réflexion et mes analyses statistiques"
                             <br><br>"Je viens de finaliser la rédaction de mon mémoire et je souhaite avoir une relecture de ma partie analyse statistique"</i></div>""", unsafe_allow_html=True)
                 st.write('')
@@ -110,7 +110,7 @@ def page_fr(graph):
                 st.markdown("""<div style="text-align: right;"><br><i>"Je souhaite apprendre Python en étant encadré par quelqu'un"
                             <br><br><i>"Je souhaite appprendre la programmation. Il y a beaucoup d'offres sur internet et je crains d'être un peu laissé à moi-même"
                             <br><br><i>"Nous souhaitons former nos staffs en interne sur la thématique X avec l'utilisation des données"
-                            <br><br>"Nous cherchons un intervenant sur la thématique X dans notre organisme de formation"
+                            <br><br>"Nous cherchons un intervenant sur la thématique X pour notre organisme de formation"
                             <br><br>"Je souhaite en apprendre davantage sur l'utilisation des données dans mon domaine avec de vrais cas pratiques"</i></div>""", unsafe_allow_html=True)
                 st.write('')
             st.write('')
