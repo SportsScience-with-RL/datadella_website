@@ -199,11 +199,11 @@ def page_fr(graph):
                             <br>- Suivi des variations.
                             <br>- Création de questionnaire sur-mesure (choix des marqueurs).</div>""", unsafe_allow_html=True)
                 st.write('')
-                st.image('img/projets/wellness.PNG', width=500)
+                st.image('img/projets/wellness.png', width=500)
             with c2:
                 st.write('')
                 st.write('')
-                st.image('img/projets/questionnaire.png', width=300)
+                st.image('img/projets/questionnaire.PNG', width=300)
             st.write('')
             cv1, ct, cv2 = st.columns([.4, .2, .4])
             with cv1:
