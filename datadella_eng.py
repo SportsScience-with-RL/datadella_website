@@ -97,7 +97,7 @@ def page_eng(graph):
                 st.markdown("""<div style="text-align: justify;"><br><b>Examples of scenarios:</b></div>""", unsafe_allow_html=True)
                 st.markdown("""<div style="text-align: right;"><br><i>"We're looking for an outside perspective on our practices. We would like some business and technical expertise to give us a constructive opinion and to monitor possible areas for improvement"
                             <br><br><i>"Our budget doesn't allow us to employ someone to manage our Data department. We are therefore looking to hire the services of a consultant"
-                            <br><br>"I am an individual athlete and I am looking for a professional to manager my monitoring"
+                            <br><br>"I am an individual athlete and I am looking for a professional to manage my monitoring"
                             <br><br><i>"I'm preparing a dissertation for my degree and would like support in my thinking and statistical analysis"
                             <br><br>"I have just finished writing my dissertation and would like to have my statistical analysis section proofread"</i></div>""", unsafe_allow_html=True)
                 st.write('')
