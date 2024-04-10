@@ -179,7 +179,7 @@ def page_fr(graph):
             st.write('')
             ci, _, cv = st.columns([.45, .1, .45])
             with ci:
-                st.image('img/projets/gps.png')
+                st.image('img/projets/gps.PNG')
             with cv:
                 st.video(open('video/gps.mp4', 'rb').read())
             st.write('')
@@ -199,7 +199,7 @@ def page_fr(graph):
                             <br>- Suivi des variations.
                             <br>- Création de questionnaire sur-mesure (choix des marqueurs).</div>""", unsafe_allow_html=True)
                 st.write('')
-                st.image('img/projets/wellness.png', width=500)
+                st.image('img/projets/wellness.PNG', width=500)
             with c2:
                 st.write('')
                 st.write('')

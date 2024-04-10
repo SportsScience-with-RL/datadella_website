@@ -181,7 +181,7 @@ def page_eng(graph):
             st.write('')
             ci, _, cv = st.columns([.45, .1, .45])
             with ci:
-                st.image('img/projets/gps.png')
+                st.image('img/projets/gps.PNG')
             with cv:
                 st.video(open('video/gps.mp4', 'rb').read())
             st.write('')
@@ -201,7 +201,7 @@ def page_eng(graph):
                             <br>- Timeseries analysis
                             <br>- Creation of customized questionnaires (choice of markers).</div>""", unsafe_allow_html=True)
                 st.write('')
-                st.image('img/projets/wellness.png', width=500)
+                st.image('img/projets/wellness.PNG', width=500)
             with c2:
                 st.write('')
                 st.write('')
