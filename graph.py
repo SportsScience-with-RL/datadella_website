@@ -10,11 +10,11 @@ import glob
 def parcours_timeline_fr():
     exp = {
         'Année': [2013, 2014, 2014, 2015, 2015, 2015, 2016, 2016, 2018, 2018, 2020, 2021, 2021, 2022, 2022,
-                  2023, 2023.7, 2023, 2023.7, 2023.7],
+                  2023, 2023.5, 2023, 2023.5, 2023.5, 2024, 2024],
         'Exp_Et': ['RAC Rugby', 'Université Paris V Descartes', 'Racing 92', 'Université de Poitiers', 'CREPS de Montpellier',
                    'ASBH', 'Université de Montpellier', 'Hurricanes', 'TrainingLoad Pro', 'Collège Sainte-Anne', 'Centre Universitaire de Santé McGill',
                    'Harvard University', 'Brûleurs de loups', 'CentraleSupélec', 'FFR XIII', 'Trimane', 'RCT',
-                   'INS', 'Boxe Canada', 'Badminton QC'],
+                   'INS QC', 'Boxe Canada', 'Badminton QC', 'INS QC', 'Soccer QC'],
         'Poste': ['Préparateur physique', 'Licence STAPS Entrainement sportif', 'Assistant Prép. physique (CDF)',
                   'DU Evaluation et Préparation physique', 'Certificat de compétences de préparateur physique pour sportifs de haut niveau', 'Assistant Prép. physique (Pro)',
                   "DU Optimisation de la préparation physique par les techniques d'haltérophilie et de force", 'Data Analyst - Sports Science<br>Assistant Prép. physique',
@@ -22,7 +22,7 @@ def parcours_timeline_fr():
                   'Analyste bases de données', 'Introduction à la Data Science avec Python',
                   'Data Scientist R&D<br>Responsable Prép. physique (Pro & CDF)', 'Maitrise Science des données en partenariat avec OpenClassrooms', 'Data Analyst - Sports Science',
                   'Data Scientist - Performance sportive', "Partenariat du club pour développer l'application", 'Data Scientist - Sport & Medicine', "Mise à jour d'une application de monitoring quotidien", 
-                  "Création d'applications<br>- Application de tagging pour saisie de statistque en match<br>- Application d'analyse des saisies statistiques de match"],
+                  "Création d'applications<br>- Application de tagging pour saisie de statistque en match<br>- Application d'analyse des saisies statistiques de match", 'Data Scientist', 'Gestionnaire de données'],
         'Projet': ['', '', '', '', '', '', '',
                    "Gestion de la structuration des données pour monitoring quotidien<br>- Extraction, transformation, chargement (ETL) des données<br>- Analyses descriptives, longitudinales (séries temporelles)<br>- Reporting quotidien",
                    '', '',
@@ -34,14 +34,14 @@ def parcours_timeline_fr():
                    "Développement d'une application analytique pour structures sportives<br>- Développement logiciel support pour clubs sportifs<br>- Conception et développement des traitements de collecte, contrôle et stockage des données<br>- Réalisation de dashboards de pilotage<br>- Analyses statistiques et machine learning",
                    '', 
                    "Structuration du département de Sciences des données<br>- Audit et nettoyage des banques de données scientifiques<br>- Restructuration et/ou développement de solutions logiciels pour optimiser le workflow des données<br>- Développement de modèles facilitant l'interprétation des données ou à des fins de prédictions",
-                   '', ''],
-        'Valeur_graph': [1, -1, 1, -1, -2, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 2, 1.7, 2.3],
+                   '', '', '', ''],
+        'Valeur_graph': [1, -1, 1, -1, -2, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 2, 1.7, 2.3, 1, 2],
         'Line_x0': [2013, 2014, 2014, 2015, 2015, 2015, 2016, 2016, 2018, 2018, 2020, 2021, 2021, 2022, 2022,
-                    2023, 2023.28, 2023, 2023.28, 2023.28],
+                    2023, 2023.25, 2023, 2023.18, 2023.18, 2024, 2024],
         'Line_x1': [2013, 2014, 2014, 2015, 2015, 2015, 2016, 2016, 2018, 2018, 2020, 2021, 2021, 2022, 2022,
-                    2023, 2023.5, 2023, 2023.5, 2023.5],       
-        'Line_y0': [0, 0, 0, 0, -1.3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1.3, 2, 2],
-        'Line_y1': [.7, -.7, .7, -.7, -1.7, .7, -.7, .76, -.79, .7, .7, -.7, .7, -.7, .7, .7, 1, 1.7, 1.7, 2.3]
+                    2023, 2023.35, 2023, 2023.38, 2023.38, 2024, 2024],       
+        'Line_y0': [0, 0, 0, 0, -1.3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1.3, 2, 2, 0, 1.3],
+        'Line_y1': [.7, -.7, .7, -.7, -1.7, .7, -.7, .76, -.79, .7, .7, -.7, .7, -.7, .7, .7, 1, 1.7, 1.7, 2.3, .7, 1.7]
        }
 
     exp_df = pd.DataFrame(exp)
@@ -50,8 +50,8 @@ def parcours_timeline_fr():
 
     for i, row in exp_df.iterrows():
         logo = row['Exp_Et']
-        if row['Exp_Et'] in ['RCT', 'Boxe Canada', 'Badminton QC']:
-            size = .4
+        if row['Exp_Et'] in ['RCT', 'Boxe Canada', 'Badminton QC', 'Soccer QC']:
+            size = .3
         else:
             size = .6
 
@@ -87,11 +87,11 @@ def parcours_timeline_fr():
 def parcours_timeline_eng():
     exp = {
         'Année': [2013, 2014, 2014, 2015, 2015, 2015, 2016, 2016, 2018, 2018, 2020, 2021, 2021, 2022, 2022,
-                  2023, 2023.7, 2023, 2023.7, 2023.7],
+                  2023, 2023.5, 2023, 2023.5, 2023.5, 2024, 2024],
         'Exp_Et': ['RAC Rugby', 'Université Paris V Descartes', 'Racing 92', 'Université de Poitiers', 'CREPS de Montpellier',
-                   'ASBH', 'Université de Montpellier', 'Hurricanes', 'TrainingLoad Pro', 'Collège Sainte-Anne', 'McGill University Health Center',
+                   'ASBH', 'Université de Montpellier', 'Hurricanes', 'TrainingLoad Pro', 'Collège Sainte-Anne', 'Centre Universitaire de Santé McGill',
                    'Harvard University', 'Brûleurs de loups', 'CentraleSupélec', 'FFR XIII', 'Trimane', 'RCT',
-                   'INS', 'Boxe Canada', 'Badminton QC'],
+                   'INS QC', 'Boxe Canada', 'Badminton QC', 'INS QC', 'Soccer QC'],
         'Poste': ['Strength & Conditioning Coach', 'Bachelor of Sciences: Applied Sports Science', 'Assistant Strength & Conditioning Coach (Academy))',
                   'University Diploma - Strength & Conditioning', 'Certificate - S&C coaching for high level athletes', 'Assistant S&C Coach (Pro)',
                   'University Diploma -  Olympic lifting and Power lifting techniques for S&C', 'Data Analyst - Sports Science<br>Assistant S&C Coach',
@@ -99,7 +99,7 @@ def parcours_timeline_eng():
                   'Databases Analyst', 'Introduction to Data Science with Python',
                   'Data Scientist R&D<br>Lead S&C Coach (Pro & Academy)', 'Master Data Science (OpenClassrooms partnership)', 'Data Analyst - Sports Science',
                   'Data Scientist - Sport Performance', 'Club partnership to develop the application', 'Data Scientist - Sport & Medicine', 'Updating a daily monitoring application', 
-                  'Applications creation<br>- Tagging application for game stats recording<br>- Game statistics analysis application'],
+                  'Applications creation<br>- Tagging application for game stats recording<br>- Game statistics analysis application', 'Data Scientist', 'Data Manager'],
         'Projet': ['', '', '', '', '', '', '',
                    'Data structuring management for daily monitoring<br>- Data Extraction, transformation, Loading (ETL)<br>- Descriptive and longitudinal analyses (timeseries)<br>- Daily reporting',
                    '', '',
@@ -111,14 +111,14 @@ def parcours_timeline_eng():
                    'Development of an analytical application for sports organizations<br>- Development of support software<br>- Design and development of data collection, control and storage processes<br>- Production of steering dashboards<br>- Statistical analysis and machine learning',
                    '', 
                    'Structuring the Data Science department<br>- Auditing and cleaning of scientific databases<br>- Restructuring and development of software solutions to optimize data workflow<br>- Development of models facilitating the interpretation of data or for prediction purposes',
-                   '', ''],
-        'Valeur_graph': [1, -1, 1, -1, -2, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 2, 1.7, 2.3],
+                   '', '', '', ''],
+        'Valeur_graph': [1, -1, 1, -1, -2, 1, -1, 1, -1, 1, 1, -1, 1, -1, 1, 1, 1, 2, 1.7, 2.3, 1, 2],
         'Line_x0': [2013, 2014, 2014, 2015, 2015, 2015, 2016, 2016, 2018, 2018, 2020, 2021, 2021, 2022, 2022,
-                    2023, 2023.28, 2023, 2023.28, 2023.28],
+                    2023, 2023.25, 2023, 2023.18, 2023.18, 2024, 2024],
         'Line_x1': [2013, 2014, 2014, 2015, 2015, 2015, 2016, 2016, 2018, 2018, 2020, 2021, 2021, 2022, 2022,
-                    2023, 2023.5, 2023, 2023.5, 2023.5],       
-        'Line_y0': [0, 0, 0, 0, -1.3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1.3, 2, 2],
-        'Line_y1': [.7, -.7, .7, -.7, -1.7, .7, -.7, .76, -.79, .7, .7, -.7, .7, -.7, .7, .7, 1, 1.7, 1.7, 2.3]
+                    2023, 2023.35, 2023, 2023.38, 2023.38, 2024, 2024],       
+        'Line_y0': [0, 0, 0, 0, -1.3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1.3, 2, 2, 0, 1.3],
+        'Line_y1': [.7, -.7, .7, -.7, -1.7, .7, -.7, .76, -.79, .7, .7, -.7, .7, -.7, .7, .7, 1, 1.7, 1.7, 2.3, .7, 1.7]
        }
 
     exp_df = pd.DataFrame(exp)
@@ -127,8 +127,8 @@ def parcours_timeline_eng():
 
     for i, row in exp_df.iterrows():
         logo = row['Exp_Et']
-        if row['Exp_Et'] in ['RCT', 'Boxe Canada', 'Badminton QC']:
-            size = .4
+        if row['Exp_Et'] in ['RCT', 'Boxe Canada', 'Badminton QC', 'Soccer QC']:
+            size = .3
         else:
             size = .6
 
